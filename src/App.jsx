@@ -1,14 +1,16 @@
 
 import './App.css'
+import Banner from './components/Pages/Banner/Banner'
+import Navbar from './components/Pages/Navbar/Navbar'
 
 function App() {
   
 
   return (
     <>
-      
-      <h1 className='text-5xl'>Fashion and Apparel</h1>
-      
+      <Navbar/>
+      <Banner/>
+       
     </>
   )
 }
