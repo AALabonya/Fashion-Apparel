@@ -1,16 +1,31 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
+
 
 const Banner = () => {
     return (
-        <div className="hero h-[600px] bg-cover" style={{backgroundImage: 'url(https://i.ibb.co/X4CVCRZ/fashion1.webp)'}}>
-  <div className="hero-overlay bg-opacity-60"></div>
-  <div className="hero-content text-center text-neutral-content">
-    <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
-    </div>
+<div className="overflow-x-hidden">
+<div data-aos="zoom-in" className="relative grid h-[40rem] w-full lg:mt-16 flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+  <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://i.ibb.co/X4CVCRZ/fashion1.webp')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+    <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
+  </div>
+  <div className="relative p-6 px-6 py-14 md:px-12">
+    <h2 data-aos="fade-right" data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000" className="mb-6 block font-sans text-4xl font-medium leading-[1.5] tracking-normal text-white antialiased">
+      How we design and code open-source projects?
+    </h2>
+    <h5 data-aos="fade-left" data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000" className="block mb-4 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-gray-400">
+      Tania Andrew
+    </h5>
   </div>
 </div>
+</div>
+
+
     );
 };
 
