@@ -2,37 +2,37 @@
     {
         "id": 1,
         "name": "Nike",
-        "image": "https://i.ibb.co/J2phGV8/ornate-floral-pattern.jpg",
+        "image": "https://i.ibb.co/yPGms4h/R.jpg",
         "price": 99.99
     },
     {
         "id": 2,
         "name": "Adidas",
-        "image": "https://i.ibb.co/zFRhB5W/new-pair-white-sneakers-isolated-white-93675-133039.jpg",
+        "image": "https://i.ibb.co/LQhQLZq/Adidas-Logo.jpg",
         "price": 89.99
     },
     {
         "id": 3,
         "name": "Gucci",
-        "image": "https://i.ibb.co/sFWjN7P/photo-1548036328-c9fa89d128fa.webp",
+        "image": "https://i.ibb.co/B6mgb8h/R.png",
         "price": 499.99
     },
     {
         "id": 4,
         "name": "Zara",
-        "image": "https://i.ibb.co/c8Fb7yy/photo-1631276016051-c9334bdf4d23.webp",
+        "image": "https://i.ibb.co/93GtSXR/R-1.jpg",
         "price": 49.99
     },
     {
         "id": 5,
         "name": "H&M",
-        "image": "https://i.ibb.co/3p10gw2/photo-1607160199580-1b0c9b736b66.webp",
+        "image": "https://i.ibb.co/52SRBf3/HM-Logo-1968-1999.png",
         "price": 29.99
     },
     {
         "id": 6,
         "name": "Levi's",
-        "image": "https://i.ibb.co/ZVQ1ZWw/photo-1544610280-5265bdceba0c.webp",
+        "image": "https://i.ibb.co/nM1ZdcG/51bd25674742790869c9347450371833.jpg",
         "price": 69.99
     }
 ]

@@ -42,7 +42,7 @@ const SpecialCombo = () => {
                                     <h2 className="card-title">{product.brandName}</h2>
                                     <p>${product.price}</p>
                                     <div className="card-actions">
-                                        <button className="btn bg-green-600 text-white">Buy Now</button>
+                                        <button className="btn bg-pink-600 text-white">Buy Now</button>
                                     </div>
                                 </div>
                             </div>

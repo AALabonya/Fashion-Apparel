@@ -35,7 +35,7 @@ const ClientReview = () => {
          className="mySwiper"
       >
         <SwiperSlide> <div className="flex justify-center">
-                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-pink-900  bg-clip-border text-center text-gray-700">
                     <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-pink-900  bg-clip-border bg-center text-gray-700 shadow-none">
                         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
                     </div>
@@ -58,7 +58,7 @@ const ClientReview = () => {
                 </div>
             </div></SwiperSlide>
         <SwiperSlide><div className="flex justify-center">
-                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-pink-900  bg-clip-border text-center text-gray-700">
                     <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-pink-900  bg-clip-border bg-center text-gray-700 shadow-none">
                         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
                     </div>
@@ -81,7 +81,7 @@ const ClientReview = () => {
                 </div>
             </div></SwiperSlide>
         <SwiperSlide><div className="flex justify-center">
-                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-pink-900  bg-clip-border text-center text-gray-700">
                     <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-pink-900  bg-clip-border bg-center text-gray-700 shadow-none">
                         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
                     </div>
@@ -104,7 +104,7 @@ const ClientReview = () => {
                 </div>
             </div></SwiperSlide>
         <SwiperSlide><div className="flex justify-center">
-                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-pink-900  bg-clip-border text-center text-gray-700">
                     <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-pink-900  bg-clip-border bg-center text-gray-700 shadow-none">
                         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
                     </div>
@@ -127,7 +127,7 @@ const ClientReview = () => {
                 </div>
             </div></SwiperSlide>
         <SwiperSlide><div className="flex justify-center">
-                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-pink-900  bg-clip-border text-center text-gray-700">
                     <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-pink-900  bg-clip-border bg-center text-gray-700 shadow-none">
                         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
                     </div>
@@ -150,7 +150,7 @@ const ClientReview = () => {
                 </div>
             </div></SwiperSlide>
         <SwiperSlide><div className="flex justify-center">
-                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-pink-900  bg-clip-border text-center text-gray-700">
                     <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-pink-900  bg-clip-border bg-center text-gray-700 shadow-none">
                         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
                     </div>
@@ -173,7 +173,7 @@ const ClientReview = () => {
                 </div>
             </div></SwiperSlide>
         <SwiperSlide><div className="flex justify-center">
-                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-pink-900  bg-clip-border text-center text-gray-700">
                     <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-pink-900  bg-clip-border bg-center text-gray-700 shadow-none">
                         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
                     </div>
@@ -196,7 +196,7 @@ const ClientReview = () => {
                 </div>
             </div></SwiperSlide>
         <SwiperSlide><div className="flex justify-center">
-                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-pink-900  bg-clip-border text-center text-gray-700">
                     <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-pink-900  bg-clip-border bg-center text-gray-700 shadow-none">
                         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
                     </div>
@@ -219,7 +219,7 @@ const ClientReview = () => {
                 </div>
             </div></SwiperSlide>
         <SwiperSlide><div className="flex justify-center">
-                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="relative grid h-[20rem] w-full max-w-[40rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-pink-900  bg-clip-border text-center text-gray-700">
                     <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-pink-900  bg-clip-border bg-center text-gray-700 shadow-none">
                         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
                     </div>
