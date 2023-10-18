@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "brandName": "Fashionista",
+      "image": "https://i.ibb.co/xqdmXtv/fathers-day-composition-with-gift-box-23-2147790796.jpg",
+      "price": 49.99
+    },
+    {
+      "id": 2,
+      "brandName": "TechGear",
+      "image": "https://i.ibb.co/xzrZ1z6/high-heels-make-up-case-23-2147635498.jpg",
+      "price": 299.99
+    },
+    {
+      "id": 3,
+      "brandName": "HomeEssentials",
+      "image": "https://i.ibb.co/dDyQkdp/ladies-luggage-shoulder-bag-handbag-luxury-bag-rendering-advertising-rendering-background-327903-919.jpg",
+      "price": 19.99
+    },
+    {
+      "id": 4,
+      "brandName": "SportsZone",
+      "image": "https://i.ibb.co/tYz3wV2/mens-cosmetic-series-realistic-composition-1284-22829.jpg",
+      "price": 79.99
+    },
+    {
+      "id": 5,
+      "brandName": "BeautyTrends",
+      "image": "https://i.ibb.co/0B2y2vK/men-s-accessories-160204-1734.jpg",
+      "price": 29.99
+    },
+    {
+      "id": 6,
+      "brandName": "Electronix",
+      "image": "https://i.ibb.co/Wn55VVj/fathers-day-composition-with-accessories-23-2147810634.jpg",
+      "price": 199.99
+    },
+    {
+      "id": 7,
+      "brandName": "OutdoorAdventures",
+      "image": "https://i.ibb.co/jM9ZV95/still-life-spring-wardrobe-switch-23-2150478952.jpg",
+      "price": 129.99
+    },
+    {
+      "id": 8,
+      "brandName": "FoodLovers",
+      "image": "https://i.ibb.co/KsqFDXV/vintage-still-life-with-roses-ballet-shoes-155003-3374.jpg",
+      "price": 9.99
+    },
+    {
+      "id": 9,
+      "brandName": "KidsPlay",
+      "image": "https://i.ibb.co/LDwKdRR/football-composition-with-slate-23-2147827656.jpg",
+      "price": 39.99
+    }
+  ]

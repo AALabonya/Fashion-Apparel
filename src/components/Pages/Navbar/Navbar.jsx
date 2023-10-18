@@ -28,7 +28,7 @@ return (
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn px-1 py-1 bg-pink-600 lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
           <ul tabIndex={0} className="dropdown-content lg:mt-3 z-[100] lg:p-2 shadow bg-green-500 rounded-box">
             {navLinks}
@@ -51,7 +51,7 @@ return (
                   </div>
                 </div>
                 <div >
-                  <button onClick={handleSignOut} className="btn bg-green-500 font-bold flex ">
+                  <button onClick={handleSignOut} className="btn bg-pink-500 font-bold flex text-white">
                     <span>{user.displayName}</span><br/>
                     <span>LogOut</span> 
 
@@ -60,8 +60,10 @@ return (
               </>
 
                 :
-                <Link to="/login" className="btn font-bold bg- bg-green-700 text-white">Login</Link>
+                <Link to="/login" className="btn font-bold bg- bg-pink-700 text-white">Login</Link>
             }
+
+            
       </div>
     </div>
   </div>
