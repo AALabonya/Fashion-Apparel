@@ -97,7 +97,7 @@ const [errorHandle, setErrorHandle] = useState("")
         </div>
     </form>
     {
-                    errorHandle && <p className="text-red-700">{errorHandle}</p>
+                    errorHandle && <p className="text-white font-bold">{errorHandle}</p>
                 }
 </div>
 

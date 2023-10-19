@@ -76,7 +76,7 @@ const Login = () => {
 
                                 </form>
                                 {
-                                    showLogInError && <p className="text-red-700">{showLogInError}</p>
+                                    showLogInError && <p className="text-white font-bold">{showLogInError}</p>
                                 }
                             </div>
 
