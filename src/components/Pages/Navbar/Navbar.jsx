@@ -17,7 +17,7 @@ const navLinks = <>
 
 <li className="bg-pink-600 text-white rounded-lg"> <NavLink to="/">Home</NavLink></li>
 <li className="bg-pink-600 text-white rounded-lg"> <NavLink to="/addProduct">Add Product</NavLink></li>
-<li className="bg-pink-600 text-white rounded-lg"> <NavLink to="/addToCart">Add to Cart</NavLink></li>
+<li className="bg-pink-600 text-white rounded-lg"> <NavLink to="/myCart">My Cart</NavLink></li>
 <li className="bg-pink-600 text-white rounded-lg"> <NavLink to="/register">Registration</NavLink></li>
 
 </>
@@ -34,7 +34,8 @@ return (
             {navLinks}
           </ul>
         </div>
-        <Link className="bg-transparent"><img src="https://i.ibb.co/pyjmgkP/hand-drawn-clothing.webp" alt="" className=" w-14 lg:w-20 md:w-20" /></Link>
+        <Link className="bg-transparent"><img src="https://i.ibb.co/XDq7C8k/309867165-531981202263214-2459279338961586468-n.jpg" alt="" className=" w-8 lg:w-10 md:w-20 rounded-xl"/>
+        <span className="text-pink-600 font-bold text-xs md:text-base lg:text-base">Fashion Memoir</span></Link>
 
       </div>
       <div className="navbar-center hidden lg:flex">

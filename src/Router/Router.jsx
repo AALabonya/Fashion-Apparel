@@ -4,9 +4,11 @@ import Home from "../components/Pages/Home/Home";
 import Register from "../components/Login/Register";
 import Login from "../components/Login/Login";
 import AddProducts from "../components/AddProduct/AddProducts";
-import AddToCart from "../components/AddToCart/AddToCart";
 import ErrorPage from "../components/Pages/ErrorPage/ErrorPage";
 import DynamicProducts from "../components/DynamicProducts/DynamicProducts";
+import UpdateProduct from "../UpdateProduct/UpdateProduct";
+import ShowDetails from "../components/ShowDetails/ShowDetails";
+import MyCart from "../components/MyCart/MyCart";
 
 
 const Router = createBrowserRouter([
@@ -17,7 +19,8 @@ const Router = createBrowserRouter([
         children:[
             {
                 path:"/",
-                element:<Home/>
+                element:<Home/>,
+                loader:()=> fetch("http://localhost:5000/brands")
             },
             {
                 path:"/register",
@@ -32,15 +35,26 @@ const Router = createBrowserRouter([
                 element:<AddProducts/>
             },
             {
-                path:"/addToCart",
-                element:<AddToCart/>
+                path:"/myCart",
+                element:<MyCart/>,
+                loader:()=> fetch("http://localhost:5000/cart")
 
             },
             {
-                path:"/product/:id",
+                path:"/product/:name",
                 element:<DynamicProducts/>,
-                loader:({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+                loader: ()=> fetch(`http://localhost:5000/product`)
                
+            },
+            {
+               path:"/showDetails/:id",
+               element:<ShowDetails/>,
+               loader: ()=> fetch(`http://localhost:5000/product`)
+            },
+            {
+                path:"/updateProduct/:id",
+                element:<UpdateProduct/>,
+                loader:({params}) =>fetch(`http://localhost:5000/product/${params.id}`)
             }
         ]
     }
