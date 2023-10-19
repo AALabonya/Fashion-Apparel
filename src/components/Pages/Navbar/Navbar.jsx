@@ -30,12 +30,14 @@ return (
           <label tabIndex={0} className="btn px-1 py-1 bg-pink-600 lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
-          <ul tabIndex={0} className="dropdown-content lg:mt-3 z-[100] lg:p-2 shadow bg-green-500 rounded-box">
+          <ul tabIndex={0} className="dropdown-content lg:mt-3 z-[100] lg:p-2 shadow bg-pink-500 rounded-box">
             {navLinks}
           </ul>
         </div>
-        <Link className="bg-transparent"><img src="https://i.ibb.co/XDq7C8k/309867165-531981202263214-2459279338961586468-n.jpg" alt="" className=" w-8 lg:w-10 md:w-20 rounded-xl"/>
-        <span className="text-pink-600 font-bold text-xs md:text-base lg:text-base">Fashion Memoir</span></Link>
+        <div>
+        <Link className="bg-transparent"><img src="https://i.ibb.co/XDq7C8k/309867165-531981202263214-2459279338961586468-n.jpg" alt="" className=" w-8 lg:w-10 md:w-10 rounded-xl ml-7 mt-3"/></Link>
+        <p className="text-pink-600 font-bold text-xs md:text-base ">Fashion Memoir</p>
+        </div>
 
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -53,8 +55,9 @@ return (
                 </div>
                 <div >
                   <button onClick={handleSignOut} className="btn bg-pink-500 font-bold flex text-white">
-                    <span>{user.displayName}</span><br/>
-                    <span>LogOut</span> 
+                    
+                    <p className="text-center">{user?.displayName}</p> 
+                    <p>LogOut</p>
 
                   </button>
                 </div>

@@ -12,16 +12,23 @@ const ShowDetails = () => {
         setDetails(findData)
     }, [showData, id])
 
-    // console.log(details);
+    const myCart = {
+        name: details.name,
+        image: details.image,
+        brand: details.brand,
+        type: details.type,
+        price: details.price,
+        rating: details.rating,
+    }
 
-    const handleDetails = (product) => {
+    const handleDetails = () => {
 
         fetch(`http://localhost:5000/cart`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(product)
+            body: JSON.stringify(myCart)
         })
             .then(res => res.json())
             .then(data => {
@@ -35,7 +42,7 @@ const ShowDetails = () => {
 
     return (
 
-        <div className="mt-32 flex justify-center">
+        <div className="mt-10 md:mt-32  lg:mt-32 flex justify-center">
             <div className="card card-compact w-96 lg:w-[500px] bg-base-100 shadow-xl">
                 <figure><img src={details.image} alt="image" /></figure>
                 <div className="card-body">
@@ -44,8 +51,7 @@ const ShowDetails = () => {
                     <p>{details.description}</p>
                     <h5 className="font-bold text-lg">Price :$ {details.price}</h5>
                     <div className="card-actions justify-center">
-
-                        <button onClick={() => handleDetails(details)} className="btn bg-pink-800 text-white">Add To Cart</button>
+                        <button onClick={handleDetails} className="btn bg-pink-800 text-white">Add To Cart</button>
                     </div>
                 </div>
             </div>

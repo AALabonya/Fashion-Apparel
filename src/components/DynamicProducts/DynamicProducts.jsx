@@ -14,22 +14,22 @@ import { Link, useLoaderData, useParams } from 'react-router-dom';
 AOS.init();
 const DynamicProducts = () => {
 
-const loaderData = useLoaderData()
+  const loaderData = useLoaderData()
 
-const loadedId = useParams()
-
-
-const [display, setDisplay]= useState([])
-     
-       useEffect(()=>{
-         const detailData = loaderData.filter(data=> data.brand == loadedId.name )
-        setDisplay(detailData)
-       },[loaderData, loadedId])
-    
+  const loadedId = useParams()
 
 
-    return (
-        <div className='overflow-x-hidden lg:mt-20 mt-10' data-aos="zoom-in" >
+  const [display, setDisplay] = useState([])
+
+  useEffect(() => {
+    const detailData = loaderData?.filter(data => data.brand == loadedId.name)
+    setDisplay(detailData)
+  }, [loaderData, loadedId])
+
+
+
+  return (
+    <div className='overflow-x-hidden lg:mt-20 mt-10' data-aos="zoom-in" >
       <Swiper
         slidesPerView={1}
         spaceBetween={20}
@@ -51,8 +51,8 @@ const [display, setDisplay]= useState([])
                   data-aos-offset="300"
                   data-aos-easing="ease-in-sine" data-aos-duration="1000" className='absolute top-60 overflow-x-hidden'>
 
-                  <h1 className='font-bold text-white text-xl lg:text-5xl mb-2'>Welcome To Our Yoga and and Fitness Retreats center.</h1>
-                  <p className='font-semibold overflow-x-hidden text-white text-xs lg:text-xl'>You are welcome to visit our center where every person is treated with high attention</p>
+                  <h1 className='font-bold text-pink-700 text-xl lg:text-5xl mb-2'>Perfect Fusion of Style</h1>
+                  <p className='font-semibold overflow-x-hidden text-white text-xs lg:text-xl'>Discover the perfect blend of style and performance with iconic brands like Nike and Adidas.<br /> Elevate your fashion game with the luxury of Gucci and the latest trends from Zara, H&M, and Levis. </p>
                 </div>
 
               </div>
@@ -69,8 +69,8 @@ const [display, setDisplay]= useState([])
             <div>
               <div className='text-center flex justify-center '>
                 <div className='absolute top-60'>
-                  <h1 className='font-bold text-white lg:text-5xl mb-2'> A complete Workout from head to toes.</h1>
-                  <p className='font-semibold text-white lg:text-xl'>If you need advice on therapies , please contact use and we will be happy to assist you.</p>
+                <h1 className='font-bold text-pink-700 text-xl lg:text-5xl mb-2'>Perfect Fusion of Style</h1>
+                  <p className='font-semibold overflow-x-hidden text-white text-xs lg:text-xl'>Discover the perfect blend of style and performance with iconic brands like Nike and Adidas.<br /> Elevate your fashion game with the luxury of Gucci and the latest trends from Zara, H&M, and Levis. </p>
                 </div>
               </div>
             </div>
@@ -86,42 +86,49 @@ const [display, setDisplay]= useState([])
             <div>
               <div className='text-center flex justify-center '>
                 <div className='absolute top-60'>
-                  <h1 className='font-bold text-white lg:text-5xl mb-2'> Keeping Your Mind in Best Condition.</h1>
-                  <p className='font-semibold text-white lg:text-xl'>We offer diverse health programs that included physical exercise, nutrition plans, yoga and meditation classes.</p>
+                <h1 className='font-bold text-pink-700 text-xl lg:text-5xl mb-2'>Perfect Fusion of Style</h1>
+                  <p className='font-semibold overflow-x-hidden text-white text-xs lg:text-xl'>Discover the perfect blend of style and performance with iconic brands like Nike and Adidas.<br /> Elevate your fashion game with the luxury of Gucci and the latest trends from Zara, H&M, and Levis. </p>
                 </div>
               </div>
             </div>
           </div>
         </SwiperSlide>
-       
-       
-        
+
+
+
 
       </Swiper>
+      <div className='flex justify-center mt-10'>
 
-         <p>{display.length >0 ? "" : "No data found"}</p>
+        <p className='text-6xl font-bold'>{display.length > 0 ? "" : "No data found"}</p>
 
-      {
-        display.map(data=><div className='grid grid-cols-2 gap-10'>
-        <div  className="card w-96 bg-base-100 shadow-xl">
-          <figure><img src={data.image} alt="Shoes" /></figure>
-          <div className="card-body">
-           <h2 className="card-title">
-           {data.brand}
-             <div className="badge badge-secondary ml-32">{data.rating}</div>
-           </h2>
-           <p>{data.name} <br/><span className=''>{data.type}</span></p>
-           <div className="card-actions justify-between">
-             <Link to={`/showDetails/${data._id}`}><div className="badge badge-outline">Details Button </div></Link> 
-            <Link to={`/updateProduct/${data._id}`}> <div className="badge badge-outline">Update button</div></Link>
-           </div>
-         </div>
-       </div>
-   
-    </div>)
-      }
+        <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2 gap-10 '>
+        {
+          display.map(data => <div key={data._id}>
+            <div className="card md:w-96 lg:w-[500px] bg-base-100 shadow-xl">
+              <figure><img src={data.image} alt="Shoes" className='w-[200px] h-[180px] md:w-[280px] md:h-[250px] lg:w-[400px] lg:h-[300px]'/></figure>
+              <div className="card-body">
+                <h2 className="card-title">
+                 Brand:{data.brand}
+                  <div className="badge bg-pink-800 text-white ml-72">{data.rating}</div>
+                </h2>
+                <div>
+                <p ><span className='font-bold'>Products:</span> {data.name}</p>
+                <p className=''><span className='font-bold' >Type :</span> {data.type}</p>
+                </div>
+                <div className="card-actions justify-between">
+                  <Link to={`/showDetails/${data._id}`}><div className="btn bg-pink-700 text-white">Details Button </div></Link>
+                  <Link to={`/updateProduct/${data._id}`}> <div className="btn bg-pink-700 text-white">Update button</div></Link>
+                </div>
+              </div>
+            </div>
 
-   
+          </div>)
+        }
+
+        </div>
+      </div>
+
 
     </div>
   );

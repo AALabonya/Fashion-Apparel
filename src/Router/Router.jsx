@@ -9,6 +9,7 @@ import DynamicProducts from "../components/DynamicProducts/DynamicProducts";
 import UpdateProduct from "../UpdateProduct/UpdateProduct";
 import ShowDetails from "../components/ShowDetails/ShowDetails";
 import MyCart from "../components/MyCart/MyCart";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 const Router = createBrowserRouter([
@@ -32,11 +33,11 @@ const Router = createBrowserRouter([
             },
             {
                 path:"/addProduct",
-                element:<AddProducts/>
+                element:<PrivateRoute><AddProducts/></PrivateRoute>
             },
             {
                 path:"/myCart",
-                element:<MyCart/>,
+                element:<PrivateRoute><MyCart/></PrivateRoute>,
                 loader:()=> fetch("http://localhost:5000/cart")
 
             },
@@ -48,12 +49,12 @@ const Router = createBrowserRouter([
             },
             {
                path:"/showDetails/:id",
-               element:<ShowDetails/>,
+               element:<PrivateRoute><ShowDetails/></PrivateRoute>,
                loader: ()=> fetch(`http://localhost:5000/product`)
             },
             {
                 path:"/updateProduct/:id",
-                element:<UpdateProduct/>,
+                element:<PrivateRoute><UpdateProduct/></PrivateRoute>,
                 loader:({params}) =>fetch(`http://localhost:5000/product/${params.id}`)
             }
         ]

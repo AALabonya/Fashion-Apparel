@@ -6,8 +6,8 @@ import swal from "sweetalert";
 const MyCart = () => {
 
     const cart = useLoaderData()
-    console.log(cart);
     const[users, setUsers] = useState(cart)
+
     const handleDelete= id =>{
         fetch(`http://localhost:5000/cart/${id}`,{
             method:"DELETE",
@@ -17,6 +17,7 @@ const MyCart = () => {
             console.log(data);
             if(data.deletedCount >0){
                swal("Good job!", "Deleted Successfully!", "success");
+
                 const remainingUsers = users.filter(user=> user._id !== id)
                 setUsers(remainingUsers)
             }
@@ -25,40 +26,29 @@ const MyCart = () => {
 
 
     return (
-        <div className="mt-32">
-                 <div className="overflow-x-auto p-5">
-  <table className="table table-zebra">
-    {/* head */}
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Image</th>
-        <th>Brand</th>
-        <th>Type</th>
-        <th>Price</th>
-        <th>Rating</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      {/* row 1 */}
-       {
-        users.map(add=> <tr key={add._id}>
-            <th>{add.name}</th>
-            <td>{add.image}</td>
-            <td>{add.brand}</td>
-            <td>{add.type}</td>
-            <td>{add.price}</td>
-            <td>{add.rating}</td>
-            <td>
-                <button onClick={()=>handleDelete(add._id)} className="btn"><img src="https://i.ibb.co/2k7vTG4/delete-icon-image-15.png" className="w-8" alt="" /></button>
-            </td>
-          </tr>)
-       }
-      
-    </tbody>
-  </table>
-</div>
+        <div className="mt-5 md:mt-32 lg:mt-32 flex justify-center">
+
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {
+                users.map(select => <div key={select._id} className="card lg:w-96 bg-base-100 shadow-xl">
+                <figure className="px-10 pt-10">
+                  <img src={select.image} alt="Shoes" className="rounded-xl h-[200px]" />
+                </figure>
+                <div className="card-body items-center text-center">
+                  <h2 className="card-title">Name: {select.name}</h2>
+                  <div className="flex gap-14"> <p>Brand Name: {select.brand}</p>
+                  <p>Type:{select.type}</p>
+                  </div>
+                  <div className="flex gap-14"> <p>Price: {select.price}</p>
+                  <p>Rating:{select.rating}</p></div>
+                  <div className="">
+                  <button onClick={()=>handleDelete(select._id)} className="btn"><img src="https://i.ibb.co/2k7vTG4/delete-icon-image-15.png" className="w-8" alt="" /></button>
+                  </div>
+                </div>
+              </div>)
+            }
+           </div>
+
         </div>
     );
 };

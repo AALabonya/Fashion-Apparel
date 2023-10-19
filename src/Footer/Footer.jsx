@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div className="mt-8">
+        <div className="flex justify-center mt-8">
 
-<footer className="footer p-10 bg-neutral text-neutral-content">
+<footer className="footer p-12 bg-pink-800 text-white">
   <aside>
-   <img src="https://i.ibb.co/pyjmgkP/hand-drawn-clothing.webp" className="w-10 h-10 rounded-xl" alt="" />
-    <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+   <img src="https://i.ibb.co/XDq7C8k/309867165-531981202263214-2459279338961586468-n.jpg" className="w-12 h-12 rounded-xl" alt="" />
+    <p>Fashion Memoir</p>
   </aside> 
   <nav>
     <div className="grid grid-flow-col gap-4"> <Link to="/">Home</Link>

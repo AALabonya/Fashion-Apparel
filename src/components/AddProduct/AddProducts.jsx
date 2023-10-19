@@ -16,7 +16,7 @@ const AddProducts = () => {
             description: formData.get('description'),
             rating: formData.get('rating'),
         };
-        console.log(product);
+      
 
         fetch("http://localhost:5000/product", {
             method: "POST",
@@ -39,7 +39,7 @@ const AddProducts = () => {
 
 
     return (
-        <div className="mt-28">
+        <div className="lg:mt-28">
             <div className="flex justify-center">
             <div className="bg-pink-300 p-12 w-[900px]">
             <h2 className="text-3xl font-extrabold text-center">Add Product</h2>

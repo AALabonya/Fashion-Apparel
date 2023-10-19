@@ -20,7 +20,7 @@ const [errorHandle, setErrorHandle] = useState("")
     const image = event.target.img.value
     const email = event.target.email.value
     const password = event.target.password.value
-    console.log(name,image,email, password);
+    
 
     if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/.test(password)) {
         setErrorHandle("Password should be 6 character minimum with a number, an uppercase and a special character");
@@ -97,7 +97,7 @@ const [errorHandle, setErrorHandle] = useState("")
         </div>
     </form>
     {
-                    errorHandle && <p className="text-red-400">{errorHandle}</p>
+                    errorHandle && <p className="text-red-700">{errorHandle}</p>
                 }
 </div>
 
