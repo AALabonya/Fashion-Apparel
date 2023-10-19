@@ -16,10 +16,8 @@ const DynamicProducts = () => {
 
 const loaderData = useLoaderData()
 
-console.log(loaderData[0].brand);
-
 const loadedId = useParams()
-console.log(loadedId);
+
 
 const [display, setDisplay]= useState([])
      
@@ -27,9 +25,7 @@ const [display, setDisplay]= useState([])
          const detailData = loaderData.filter(data=> data.brand == loadedId.name )
         setDisplay(detailData)
        },[loaderData, loadedId])
-    console.log(display);
-  
-
+    
 
 
     return (

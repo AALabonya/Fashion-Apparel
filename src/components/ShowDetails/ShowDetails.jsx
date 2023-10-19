@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import swal from "sweetalert";
 
 const ShowDetails = () => {
     const showData = useLoaderData()
@@ -11,25 +12,26 @@ const ShowDetails = () => {
         setDetails(findData)
     }, [showData, id])
 
-    console.log(details);
+    // console.log(details);
 
-    const handleDetails = (data) => {
+    const handleDetails = (product) => {
 
         fetch(`http://localhost:5000/cart`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(product)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                if (data.insertedId) {
+                    swal("Good job!", "Your product added successfully!", "success");
+
+                }
             })
-
-
     }
-
 
     return (
 
