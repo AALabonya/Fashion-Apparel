@@ -21,7 +21,7 @@ const UpdateProduct = () => {
         };
        
 
-        fetch(`https://fashion-and-apparel-server-site-2zp91yqur.vercel.app/product/${_id}`, {
+        fetch(` https://fashion-and-apparel-server-site-1qk4q61kx.vercel.app/product/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

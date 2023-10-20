@@ -6,7 +6,7 @@ import { AuthContext } from "../../../AuthProvider/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
-  const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
+  const [theme, setTheme] = useState(localStorage?.getItem("theme") ? localStorage.getItem("theme") : "light")
 
   
 
@@ -20,7 +20,7 @@ const Navbar = () => {
   useEffect(() => {
     localStorage.setItem("theme", theme);
     const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("date-theme", localTheme)
+    document.querySelector("html").setAttribute("data-theme", localTheme)
   }, [theme])
 
 
@@ -44,7 +44,7 @@ const Navbar = () => {
   </>
   return (
     <div className="lg:fixed lg:top-0 lg:w-full lg:bg-white lg:z-20 md:fixed md:top-0 md:w-full md:bg-white md:z-20">
-      <div className="max-w-7xl flex mx-auto px-2">
+      <div className="flex">
         <div className="navbar bg-base-100 ">
           <div className="navbar-start">
             <div className="dropdown">

@@ -9,7 +9,7 @@ const MyCart = () => {
     const[users, setUsers] = useState(cart)
 
     const handleDelete= id =>{
-        fetch(`https://fashion-and-apparel-server-site-2zp91yqur.vercel.app/cart/${id}`,{
+        fetch(` https://fashion-and-apparel-server-site-1qk4q61kx.vercel.app/cart/${id}`,{
             method:"DELETE",
         })
         .then(res=>res.json())
