@@ -105,16 +105,18 @@ const DynamicProducts = () => {
         <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2 gap-10 '>
         {
           display.map(data => <div key={data._id}>
+            
             <div className="card md:w-96 lg:w-[500px] bg-base-100 shadow-xl">
-              <figure><img src={data.image} alt="Shoes" className='w-[200px] h-[180px] md:w-[280px] md:h-[250px] lg:w-[400px] lg:h-[300px]'/></figure>
+              <figure><img src={data.image} alt="Shoes" className='w-[200px] h-[180px] md:w-[280px] md:h-[250px] lg:w-[400px] lg:h-[300px] rounded-md'/></figure>
               <div className="card-body">
-                <h2 className="card-title">
-                 Brand:{data.brand}
+                <h2 className="card-title text-lg">
+                 Brand: {data.brand}
                   <div className="badge bg-pink-800 text-white ml-72">{data.rating}</div>
                 </h2>
                 <div>
-                <p ><span className='font-bold'>Products:</span> {data.name}</p>
+                <p ><span className='font-bold'>Name:</span> {data.name}</p>
                 <p className=''><span className='font-bold' >Type :</span> {data.type}</p>
+                <p className=''><span className='font-bold' >Price : $</span> {data.price}</p>
                 </div>
                 <div className="card-actions justify-between">
                   <Link to={`/showDetails/${data._id}`}><div className="btn bg-pink-700 text-white">Details Button </div></Link>

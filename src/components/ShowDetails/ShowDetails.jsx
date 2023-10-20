@@ -23,7 +23,7 @@ const ShowDetails = () => {
 
     const handleDetails = () => {
 
-        fetch(`http://localhost:5000/cart`, {
+        fetch(`https://fashion-and-apparel-server-site-2zp91yqur.vercel.app/cart`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -46,9 +46,10 @@ const ShowDetails = () => {
             <div className="card card-compact w-96 lg:w-[500px] bg-base-100 shadow-xl">
                 <figure><img src={details.image} alt="image" /></figure>
                 <div className="card-body">
-                    <h3 className="card-title">{details.brand}</h3>
-                    <div className="flex justify-between"><h2 className="card-title">{details.name}</h2> <h2 className="card-title">{details.rating}</h2></div>
-                    <p>{details.description}</p>
+                    <h3 className="card-title">Name: {details.name}</h3>
+                    <div className="flex justify-between"><h2 className="card-title">Brand Name: {details.brand}</h2> <h2 className="card-title bg-pink-700 badge text-white">{details.rating}</h2></div>
+                    <h5 className="font-bold text-lg">Type: {details.type}</h5>
+                    <p className="text-lg"><span className="lg:font-medium">Description:</span> {details.description}</p>
                     <h5 className="font-bold text-lg">Price :$ {details.price}</h5>
                     <div className="card-actions justify-center">
                         <button onClick={handleDetails} className="btn bg-pink-800 text-white">Add To Cart</button>

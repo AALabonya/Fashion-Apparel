@@ -1,4 +1,7 @@
 ## Fashion And Apparel
+
+## client-side live link here - https://fashion-and-apparel-6d97b.web.app/
+
  ## Writing five points about my project.
 -  My website is responsive. I ensure that my website is functioning well in all devices, including smartphone, tablet, and desktop.
 

@@ -21,10 +21,14 @@ const Login = () => {
         const password = event.target.password.value
 
         signIn(email, password)
-            .then(() => {
-                navigate(location?.state ? location.state : "/")
-                swal("Good job!", "Login Successful!", "success")
+            .then((result) => {
 
+                if(result.user){
+                    return (
+                        swal("Good job!", "Login Successful!", "success"
+                        ) && navigate(location?.state ? location.state : "/")
+                    )
+                }
             })
             .catch(() => {
                 setShowLogInError("Invalid Email or Password")
@@ -48,7 +52,7 @@ const Login = () => {
     return (
         <div>
 
-            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/X4CVCRZ/fashion1.webp)' }}>
+            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/X4CVCRZ/fashion1.webp)'}}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-xl">
@@ -56,7 +60,7 @@ const Login = () => {
 
                             <div className="w-full max-w-sm bg-transparent border border-gray-200 rounded-lg shadow sm:p-6 md:p-12 dark:bg-gray-800 dark:border-gray-700">
                                 <form onSubmit={handleLoginForm} className="space-y-6">
-                                    <h5 className="text-2xl font-bold text-center bg-pink-600 rounded-lg py-2 md:py-4 lg:py-4 w-full text-white dark:text-white">LogIn</h5>
+                                    <h5 className="text-2xl font-bold text-center bg-pink-600 rounded-lg py-2 md:py-4 lg:py-4 w-full text-white dark:text-white">SignIn</h5>
 
                                     <div>
                                         <label htmlFor="email" className="block mb-2 text-sm font-medium text-white-900 dark:text-white">Your email</label>

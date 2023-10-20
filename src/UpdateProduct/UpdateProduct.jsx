@@ -21,7 +21,7 @@ const UpdateProduct = () => {
         };
        
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://fashion-and-apparel-server-site-2zp91yqur.vercel.app/product/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -41,7 +41,7 @@ const UpdateProduct = () => {
 
 
     return (
-        <div className="mt-28">
+        <div className="md:mt-28 lg:mt-28">
             <div className="flex justify-center">
                 <div className="bg-pink-300 p-12 w-[900px]">
                     <h2 className="text-3xl font-extrabold text-center">Update Product</h2>

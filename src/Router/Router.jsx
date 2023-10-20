@@ -21,7 +21,7 @@ const Router = createBrowserRouter([
             {
                 path:"/",
                 element:<Home/>,
-                loader:()=> fetch("http://localhost:5000/brands")
+                loader:()=> fetch("https://fashion-and-apparel-server-site-2zp91yqur.vercel.app/brands")
             },
             {
                 path:"/register",
@@ -38,24 +38,24 @@ const Router = createBrowserRouter([
             {
                 path:"/myCart",
                 element:<PrivateRoute><MyCart/></PrivateRoute>,
-                loader:()=> fetch("http://localhost:5000/cart")
+                loader:()=> fetch("https://fashion-and-apparel-server-site-2zp91yqur.vercel.app/cart")
 
             },
             {
                 path:"/product/:name",
                 element:<DynamicProducts/>,
-                loader: ()=> fetch(`http://localhost:5000/product`)
+                loader: ()=> fetch(`https://fashion-and-apparel-server-site-2zp91yqur.vercel.app/product`)
                
             },
             {
                path:"/showDetails/:id",
                element:<PrivateRoute><ShowDetails/></PrivateRoute>,
-               loader: ()=> fetch(`http://localhost:5000/product`)
+               loader: ()=> fetch(`https://fashion-and-apparel-server-site-2zp91yqur.vercel.app/product`)
             },
             {
                 path:"/updateProduct/:id",
                 element:<PrivateRoute><UpdateProduct/></PrivateRoute>,
-                loader:({params}) =>fetch(`http://localhost:5000/product/${params.id}`)
+                loader:({params}) =>fetch(`https://fashion-and-apparel-server-site-2zp91yqur.vercel.app/product/${params.id}`)
             }
         ]
     }

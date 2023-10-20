@@ -10,7 +10,11 @@ const Home = () => {
     return (
         <div>
             <Banner />
+            <div>
+                <h1 className="text-center text-3xl mb-10 mt-10 font-bold">Our Brand</h1>
+                </div>
             <div className="flex justify-center mt-10">
+                
                 <div className="grid grid-flow-col-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {
                         loaderData.map(data => <Link to={`/product/${data.name}`} key={data.id}>
