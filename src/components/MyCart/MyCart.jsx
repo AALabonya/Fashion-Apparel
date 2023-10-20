@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import swal from "sweetalert";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 // import Login from "../Login/Login";
 
 const MyCart = () => {
-
+ const{user}=useContext(AuthContext)
     const cart = useLoaderData()
-    const[users, setUsers] = useState(cart)
+    console.log(cart);
+    const[users, setUsers] = useState([])
+
+    useEffect(()=>{
+      const findData =cart.filter(data=> data.email === user.email)
+      setUsers(findData)
+    },[cart, user.email])
 
     const handleDelete= id =>{
         fetch(` https://fashion-and-apparel-server-site-1qk4q61kx.vercel.app/cart/${id}`,{

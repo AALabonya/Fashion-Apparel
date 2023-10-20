@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import swal from "sweetalert";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const ShowDetails = () => {
     const showData = useLoaderData()
+    const{user} =useContext(AuthContext)
+
     const id = useParams()
     const [details, setDetails] = useState([])
 
@@ -19,8 +22,10 @@ const ShowDetails = () => {
         type: details.type,
         price: details.price,
         rating: details.rating,
+        email: user.email
     }
 
+    
     const handleDetails = () => {
 
         fetch(` https://fashion-and-apparel-server-site-1qk4q61kx.vercel.app/cart`, {

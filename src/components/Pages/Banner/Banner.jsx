@@ -13,12 +13,12 @@ const Banner = () => {
   <div className="relative p-6 px-6 py-60 md:px-12">
     <h2 data-aos="fade-right" data-aos-offset="200"
     data-aos-delay="50"
-    data-aos-duration="1000" className="mb-6 block font-sans text-6xl font-bold leading-[1.5] tracking-normal text-pink-800 antialiased">
+    data-aos-duration="1000" className="mb-6 block font-sans text-3xl  md:text-4xl  lg:text-6xl font-bold leading-[1.5] tracking-normal text-pink-800 antialiased">
       Welcome to Fashion Memoir
     </h2>
     <h5 data-aos="fade-left" data-aos-offset="200"
     data-aos-delay="50"
-    data-aos-duration="1000" className="block mb-4 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-white">
+    data-aos-duration="1000" className="block mb-4 font-sans text-base  md:text-lg lg:text-xl antialiased font-semibold leading-snug tracking-normal text-white">
       Where style becomes a story. Explore a world of curated fashion memories, find inspiration,<br/> and celebrate the unique tales we tell through clothing. Join us as we turn wardrobes into chapters and embrace the art of self-expression, one outfit 
     </h5>
   </div>

@@ -44,7 +44,7 @@ const Router = createBrowserRouter([
             {
                 path:"/product/:name",
                 element:<DynamicProducts/>,
-                loader: ()=> fetch(` https://fashion-and-apparel-server-site-1qk4q61kx.vercel.app/product`)
+                loader: ()=> fetch(`https://fashion-and-apparel-server-site-1qk4q61kx.vercel.app/product`)
                
             },
             {
