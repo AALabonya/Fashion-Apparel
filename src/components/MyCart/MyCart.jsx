@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import swal from "sweetalert";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 // import Login from "../Login/Login";
 
 const MyCart = () => {
@@ -16,6 +16,16 @@ const MyCart = () => {
     },[cart, user.email])
 
     const handleDelete= id =>{
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
         fetch(` https://fashion-and-apparel-server-site-1qk4q61kx.vercel.app/cart/${id}`,{
             method:"DELETE",
         })
@@ -23,12 +33,18 @@ const MyCart = () => {
         .then(data=>{
             console.log(data);
             if(data.deletedCount >0){
-               swal("Good job!", "Deleted Successfully!", "success");
-
+             Swal.fire(
+                'Deleted!',
+                'Your Product has been deleted.',
+                 'success')
                 const remainingUsers = users.filter(user=> user._id !== id)
                 setUsers(remainingUsers)
             }
+          
         })
+
+      }
+    })
     }
 
 
