@@ -8,7 +8,7 @@ const ClientReview = () => {
     return (
 
         
-       <div className='mt-10'>
+       <div className='mt-5'>
  
           <h2 className='text-center mb-4 font-bold text-2xl'>Happy Customers Review</h2>
           

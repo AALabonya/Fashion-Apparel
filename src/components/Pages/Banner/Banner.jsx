@@ -6,7 +6,7 @@ AOS.init();
 const Banner = () => {
     return (
 <div className="overflow-x-hidden">
-<div data-aos="zoom-in" className="relative grid h-[40rem] w-full lg:mt-16 flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+<div data-aos="zoom-in" className="relative grid h-[40rem] w-full  flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
   <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://i.ibb.co/X4CVCRZ/fashion1.webp')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
     <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
   </div>

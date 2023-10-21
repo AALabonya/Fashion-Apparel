@@ -13,7 +13,7 @@ const SpecialCombo = () => {
     },[])
     return (
         <div>
-             <div className='overflow-x-hidden mt-8 lg:mt-28'>
+             <div className='overflow-x-hidden'>
             <p className="text-center font-bold">New Arrivals</p>
             <h1 className="text-center font-bold mt-2 text-4xl mb-2">Special Combo Set</h1>
 
@@ -33,8 +33,8 @@ const SpecialCombo = () => {
                     modules={[Navigation, Pagination, A11y]}
                 >
                     {
-                        specialProduct.map(product => <SwiperSlide key={product.id}>
-                            <div className="card w-90 lg:w-96 md:w-96 bg-base-100 shadow-xl  mb-4">
+                        specialProduct?.map(product => <SwiperSlide key={product.id}>
+                            <div className="card bg-base-100 shadow-xl  mb-4">
                                 <figure className="px-10 pt-10 h-70">
                                     <img src={product.image} alt="Shoes" className="rounded-xl h-52" />
                                 </figure>

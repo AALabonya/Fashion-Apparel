@@ -37,7 +37,7 @@ const ShowDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+               
                 if (data.insertedId) {
                     swal("Good job!", "Your product added successfully!", "success");
 
@@ -47,8 +47,8 @@ const ShowDetails = () => {
 
     return (
 
-        <div className="mt-10 md:mt-32  lg:mt-32 flex justify-center">
-            <div className="card card-compact w-96 lg:w-[500px] bg-base-100 shadow-xl">
+        <div className="flex justify-center">
+            <div className="card card-compact bg-base-100 shadow-xl">
                 <figure><img src={details.image} alt="image" /></figure>
                 <div className="card-body">
                     <h3 className="card-title">Name: {details.name}</h3>

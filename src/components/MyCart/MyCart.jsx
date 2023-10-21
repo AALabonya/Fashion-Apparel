@@ -7,7 +7,6 @@ import Swal from "sweetalert2";
 const MyCart = () => {
  const{user}=useContext(AuthContext)
     const cart = useLoaderData()
-    console.log(cart);
     const[users, setUsers] = useState([])
 
     useEffect(()=>{
@@ -31,7 +30,6 @@ const MyCart = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
             if(data.deletedCount >0){
              Swal.fire(
                 'Deleted!',
@@ -49,11 +47,11 @@ const MyCart = () => {
 
 
     return (
-        <div className="mt-5 md:mt-32 lg:mt-32 flex justify-center">
+        <div className="mt-5 flex justify-center">
 
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {
-                users.map(select => <div key={select._id} className="card lg:w-96 bg-base-100 shadow-xl">
+                users?.map(select => <div key={select._id} className="card bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                   <img src={select.image} alt="Shoes" className="rounded-xl h-[200px]" />
                 </figure>

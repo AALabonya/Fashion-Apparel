@@ -27,7 +27,7 @@ const Navbar = () => {
   const handleSignOut = () => {
     logOut()
       .then()
-      .catch(error => console.log(error))
+      .catch()
   }
 
 
@@ -43,21 +43,22 @@ const Navbar = () => {
 
   </>
   return (
-    <div className="lg:fixed lg:top-0 lg:w-full lg:bg-white lg:z-20 md:fixed md:top-0 md:w-full md:bg-white md:z-20">
-      <div className="flex">
-        <div className="navbar bg-base-100 ">
+    <div className="">
+      <div className="">
+      <div className="flex ">
+        <div className="navbar bg-base-100 max-w-6xl mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn px-1 bg-pink-600 lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 28 28" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
               </label>
-              <ul tabIndex={0} className="dropdown-content lg:mt-3 z-[100] lg:p-2 shadow bg-pink-500 rounded-box">
+              <ul tabIndex={0} className="dropdown-content lg:mt-3 z-[100] lg:p-2 shadow bg-pink-500 rounded-box w-36">
                 {navLinks}
               </ul>
             </div>
             <div>
               <Link className="bg-transparent"><img src="https://i.ibb.co/XDq7C8k/309867165-531981202263214-2459279338961586468-n.jpg" alt="" className=" w-8 lg:w-10 md:w-10 rounded-xl ml-7 mt-3" /></Link>
-              <p className="text-pink-600 font-bold text-xs md:text-base ">Fashion Memoir</p>
+              <p className="text-pink-600 font-bold text-xs md:text-xs lg:text-base">Fashion Memoir</p>
             </div>
 
           </div>
@@ -68,21 +69,18 @@ const Navbar = () => {
           </div>
           <div className="navbar-end">
             {
-              user ? <>
-                <div className="avatar">
-                  <div className="w-10 lg:w-12 rounded-full">
-                    <img src={user.photoURL} />
-                  </div>
-                </div>
-                <div >
-                  <button onClick={handleSignOut} className="btn bg-pink-500 font-bold flex text-white">
+               user ? <>
+               <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar"><div className="w-10 rounded-full"><img src={user.photoURL} alt="" /></div></label>
+            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-200 rounded-box w-40">
+              <button onClick={handleSignOut} >
+              <li><p>{user?.displayName}</p></li>
+              <li><a>LogOut</a></li>
+              </button>
+            </ul>
+          </div>
+            </>
 
-                    <p className="text-center">{user?.displayName}</p>
-                    <p>LogOut</p>
-
-                  </button>
-                </div>
-              </>
 
                 :
                 <Link to="/login" className="btn font-bold bg- bg-pink-700 text-white">Login</Link>
@@ -103,6 +101,7 @@ const Navbar = () => {
 
         </div>
       </div>
+    </div>
     </div>
 
   );

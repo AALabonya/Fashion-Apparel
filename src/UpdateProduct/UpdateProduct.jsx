@@ -30,7 +30,7 @@ const UpdateProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                
                 if (data.modifiedCount > 0) {
                     swal("Good job!", "You update product successfully!", "success");
 
@@ -41,9 +41,9 @@ const UpdateProduct = () => {
 
 
     return (
-        <div className="md:mt-28 lg:mt-28">
+        <div className="">
             <div className="flex justify-center">
-                <div className="bg-pink-300 p-12 w-[900px]">
+                <div className="bg-pink-300 p-12">
                     <h2 className="text-3xl font-extrabold text-center">Update Product</h2>
                     <form onSubmit={handleUpdateProduct}>
                         <div className="md:flex gap-10 mb-8">

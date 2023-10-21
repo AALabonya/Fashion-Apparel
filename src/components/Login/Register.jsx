@@ -39,9 +39,7 @@ const Register = () => {
                     navigate("/login")
                     logOut()
                 })
-                .catch(error => {
-                    console.log(error);
-                })
+
         }
         event.target.reset()
 
@@ -55,7 +53,7 @@ const Register = () => {
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
-                        <div className="lg:mt-28 md:mt-28 flex justify-center">
+                        <div className="flex justify-center">
 
                             <div className="w-full max-w-sm  bg-transparent border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
                                 <form onSubmit={handleRegister} className="space-y-6">
