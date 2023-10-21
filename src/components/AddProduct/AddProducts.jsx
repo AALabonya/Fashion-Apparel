@@ -18,7 +18,7 @@ const AddProducts = () => {
         };
       
 
-        fetch(" https://fashion-and-apparel-server-site-1qk4q61kx.vercel.app/product", {
+        fetch("  https://fashion-and-apparel-server-site-2aszh855y.vercel.app/product", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -1,6 +1,6 @@
 ## Fashion And Apparel
 
-## client-side live link here - https://resolute-maid.surge.sh/
+## client-side live link here - https://6533c1cd598cac66b07894a4--sweet-manatee-ab7fdc.netlify.app/
 
  ## Writing five points about my project.
 -  My website is responsive. I ensure that my website is functioning well in all devices, including smartphone, tablet, and desktop.

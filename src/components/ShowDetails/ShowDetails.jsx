@@ -28,7 +28,7 @@ const ShowDetails = () => {
     
     const handleDetails = () => {
 
-        fetch(` https://fashion-and-apparel-server-site-1qk4q61kx.vercel.app/cart`, {
+        fetch(`  https://fashion-and-apparel-server-site-2aszh855y.vercel.app/cart`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
