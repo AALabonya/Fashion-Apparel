@@ -20,12 +20,11 @@
 # Technology I used 
 
 - React
-- Axios
 - Tailwind CSS
 - DaisyUI
 - React Helmet
 - sweetalert2
-- React Stripe 
+- Swiper js
 - Express JS
 - MongoDB
 - Firebase(authentication)
