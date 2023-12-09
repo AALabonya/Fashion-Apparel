@@ -11,6 +11,7 @@ const MyCart = () => {
 
     useEffect(()=>{
       const findData =cart.filter(data=> data.email === user.email)
+      console.log(findData);
       setUsers(findData)
     },[cart, user.email])
 

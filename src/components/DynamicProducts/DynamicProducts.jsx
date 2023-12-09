@@ -23,6 +23,7 @@ const DynamicProducts = () => {
 
   useEffect(() => {
     const detailData = loaderData?.filter(data => data.brand == loadedId.name)
+    console.log(detailData);
     setDisplay(detailData)
   }, [loaderData, loadedId])
 

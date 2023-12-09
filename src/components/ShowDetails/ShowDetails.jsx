@@ -12,6 +12,7 @@ const ShowDetails = () => {
 
     useEffect(() => {
         const findData = showData.find(show => show._id == id.id)
+        console.log(findData);
         setDetails(findData)
     }, [showData, id])
 
@@ -28,7 +29,7 @@ const ShowDetails = () => {
     
     const handleDetails = () => {
 
-        fetch(`  https://fashion-and-apparel-server-site-2aszh855y.vercel.app/cart`, {
+        fetch(` https://fashion-and-apparel-server-site-2aszh855y.vercel.app/cart`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -50,6 +51,13 @@ const ShowDetails = () => {
         <div className="flex justify-center">
             <div className="card card-compact bg-base-100 shadow-xl">
                 <figure><img src={details.image} alt="image" /></figure>
+
+
+
+
+
+
+                
                 <div className="card-body">
                     <h3 className="card-title">Name: {details.name}</h3>
                     <div className="flex justify-between"><h2 className="card-title">Brand Name: {details.brand}</h2> <h2 className="card-title bg-pink-700 badge text-white">{details.rating}</h2></div>
