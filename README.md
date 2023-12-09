@@ -1,5 +1,5 @@
-## Fashion And Apparel
-
+## Fashion Memoir
+ 
 - [Live Site Link (Netlify)](https://6533c1cd598cac66b07894a4--sweet-manatee-ab7fdc.netlify.app/)
 - [Client Site Repo](https://github.com/AALabonya/Fashion-Apparel)
 - [Server Site Repo](https://github.com/AALabonya/Fashion-Apparel-Server)
@@ -16,3 +16,18 @@
 - I have added dynamic product details where users can see different types of products.
 
 - Our website have e-commerce platform where users can purchase Fashion And Apparel products like Men's and women's clothing, accessories, Bags and Shoes etc.
+
+# Technology I used 
+
+- React
+- Axios
+- Tailwind CSS
+- DaisyUI
+- React Helmet
+- sweetalert2
+- React Stripe 
+- Express JS
+- MongoDB
+- Firebase(authentication)
+- Netlify
+- Vercel
